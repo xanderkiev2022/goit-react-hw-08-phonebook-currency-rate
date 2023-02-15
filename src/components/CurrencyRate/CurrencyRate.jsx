@@ -54,8 +54,8 @@ export const CurrencyRate = () => {
             {currencyRate.cur?.map(({ currencyCodeA, rateBuy, rateSell }) => (
               <tr key={currencyCodeA}>
                 <RowBody>{currencyCodeA === Number(840) ? 'USD' : 'EUR'}</RowBody>
-                <RowBody>{rateBuy.toFixed(2)}</RowBody>
-                <RowBody>{rateSell.toFixed(2)}</RowBody>
+                <RowBody>{+rateBuy.toFixed(2)}</RowBody>
+                <RowBody>{+rateSell.toFixed(2)}</RowBody>
               </tr>
             ))}
           </Tbody>
@@ -64,5 +64,4 @@ export const CurrencyRate = () => {
     </Container>
   );
 };
-// Розумний комопнент?
 // Верстка мобілка, планшет, десктоп
